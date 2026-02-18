@@ -1,0 +1,198 @@
+.page {
+    &__productivity {
+        padding: 60px 30px 86px;
+
+        @media (min-width: 376px) {
+            padding: 60px 15px 52px;
+        }
+    }
+}
+
+// ---------- БЛОК С КАРТИНКОЙ ---------- //
+.productivity {
+    &__image {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+
+        @media (min-width: $breakpoint-992px) {
+            flex-direction: row;
+        }
+    }
+
+    &__img {
+        position: relative;
+        object-fit: cover;
+
+        > img {
+            border-radius: 16px;
+            box-shadow: 0 25px 50px -12px rgba($color-black, 0.25);
+        }
+
+        margin: 0 auto 60px;
+        width: 80%;
+
+        @media (min-width: $breakpoint-768px) {
+            width: 75%;
+        }
+
+        @media (min-width: $breakpoint-992px) {
+            
+        }
+    }
+
+    &__result {
+        position: absolute;
+        bottom: -64px;
+        right: -23px;
+        color: #fff;
+        background: linear-gradient(135deg, $color-primary-green, #5EA500);
+        // margin: 0 32px 0 0;
+        padding: 14px 24px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow:  0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+        // @media (min-width: 376px) {
+        //     bottom: -32px;
+        // }
+        
+        // @media (min-width: 576px) {
+        //     margin: 0 32px 0 0; padding: 16px 32px;
+        // }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        // padding-left: 32px;
+
+        // @media (min-width: 992px) {
+        //     padding-left: 0;
+        // }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+
+        @media (min-width: $breakpoint-576px) {
+            grid-template-columns: 1fr 1fr;
+        }
+    } 
+
+    &__header {
+        text-align: center;
+        width: 75%;
+        margin: 0 auto 32px;
+
+        @media (min-width: $breakpoint-992px) {
+            margin: 0 0 32px;
+            text-align: left;
+        }
+    }
+
+    .sign {
+        margin: 0 auto;
+
+        @media (min-width: $breakpoint-992px) {
+            margin: 0;
+        }
+    }
+
+    .btn {
+        margin: 60px auto 0;
+        background: $color-primary-green;
+        padding: 15px 31px;
+        color: #fff;
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+.result {
+    &__top {
+        display: flex;
+        margin: 0 0 8px 0;
+
+        @media (min-width: 576px) {
+            margin: 0 0 12px 0;
+        }
+    }
+
+    &__bottom {
+        color: #ECFDF5;
+        font-size: 0.75rem; // 12px
+        font-weight: 400;
+        line-height: 142.857%;
+
+        @media (min-width: 576px) {
+            font-size: 0.875rem;
+        }
+    }
+
+    &__icon {
+        width: 35px; height: 35px;
+        margin: 0 10px 0 0;
+
+        @media (min-width: 576px) {
+            width: 40px; height: 40px;
+            margin: 0 12px 0 0;
+        }
+    }
+
+    &__info {}
+
+    &__period {
+        color: #D0FAE5;
+        font-size: 0.625rem; // 10px
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+
+        @media (min-width: 576px) {
+            font-size: 0.75rem;
+        }
+    }
+
+    &__value {
+        font-size: 1.25rem; // 20px
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing:-0.6px;
+
+        @media (min-width: 576px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    
+}
+
+.grid-productivity {
+    &__item {
+        padding: 29px;
+    }
+
+    &__icon {
+        width: 40px; height: 40px;
+        margin: 0 0 32px 0;
+    }
+
+    &__value {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 200%;
+        letter-spacing: -0.9px;
+        color: #555658;
+        margin: 0 0 8px 0;
+    }
+
+    &__param {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 142.857%;
+    }
+}

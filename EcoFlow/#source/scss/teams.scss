@@ -1,0 +1,110 @@
+.page {
+    &__teams {
+        padding: 60px 15px;
+
+        @media (min-width: $breakpoint-992px) {
+            padding: 60px 30px;
+        }
+    }
+}
+
+.teams {
+    .sign {
+        margin: 0 auto;
+    }
+    
+    &__container {}
+
+    &__header {
+        &:not(:last-child) {
+            margin: 0 0 64px 0;
+        }
+    }
+
+    &__row {
+    }
+
+    &__columns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .columns {
+        &__column {
+            flex: 1 0 100%;
+
+            @media (min-width: $breakpoint-768px) {
+                flex: 1 0 50%;
+            }
+
+            @media (min-width: $breakpoint-992px) {
+                flex: 0 0 33.333%;
+            }
+        }
+    }
+
+    .item {
+        height: 100%;
+         
+        &__desc {
+            &> :not(:last-child) {
+                margin: 0 0 32px 0;
+            }
+        }
+
+        &__rating {
+            img {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &__text {
+            color: #364153;
+            font-size: 0.937rem;
+            font-style: normal;
+            margin-top: 0;
+            text-align: left;
+            font-weight: 400;
+            line-height: 150%;
+        }
+
+        &__user {}
+    }
+    
+    // ------------------------------------------------
+    .user {
+        &__info {
+            display: flex;
+        }
+
+        &__img {
+            width: 48px;
+            height: 48px;
+            margin: 0 16px 0 0;
+        }
+
+        &__container {}
+
+        &__name {
+            color: $color-deep-ocean;
+            font-size: 0.937rem;
+            font-weight: 600;
+            line-height: 143.75%;
+            letter-spacing: -.375px;
+        }
+
+        &__post {
+            font-size: 0.875rem;
+            font-weight: 400;
+            line-height: 125%;
+        }
+
+        &__company {
+            color: $color-light-gray;
+            font-size: 0.75rem;
+            font-weight: 400;
+            line-height: 100%;
+        }
+    }
+}

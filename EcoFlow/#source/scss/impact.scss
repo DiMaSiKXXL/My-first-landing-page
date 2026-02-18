@@ -1,0 +1,250 @@
+.page {
+    &__impact {
+        padding: 0 30px;
+        background-image: linear-gradient(-131deg,#f9fafb 0,#ecfdf5 100%);
+
+        @media (min-width: 376px) {
+            padding: 60px;
+        }
+    }
+}
+
+.impact {
+    .sign {
+        margin: 0 auto;
+    }
+    
+    &__container {
+        > :not(:last-child) {
+            margin:  0 0 64px 0;
+        }
+    }
+
+    &__header {}
+
+    &__columns {}
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 -16px;
+    }
+
+    &__footer {
+        background: $color-white;
+        border: 1px solid #e5e7eb99;
+        padding: 20px 20px 40px;
+        border-radius: 16px;
+
+        > :not(:last-child) {
+            margin:  0 0 32px 0;
+        }
+    }
+}
+
+// ---------- HEAD ---------- //
+.head {
+    &__columns {
+        :not(:last-child) {
+            margin: 0 0 16px 0;
+        }
+    }
+
+    &__icon {
+        width: 44px; height: 44px;
+    }
+
+    &__title {
+        color: $color-deep-ocean;
+        font-size: 1.5rem;
+        font-style: normal;
+        font-family: Manrope;
+        font-weight: 700;
+        line-height: 200%;
+        letter-spacing: -0.6px;
+    }
+
+    &__text {
+        font-size: 0.937rem;
+        font-weight: 400;
+        line-height: 150%;
+    }
+}
+
+// ---------- COLUMNS ---------- //
+.columns {
+    &__impact {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -16px;
+    }
+
+    &__column {
+        position: relative;
+        flex: 0 0 100%;
+        margin: 0 0 30px 0;
+        padding: 0 16px;
+
+        @media (min-width: 768px) {
+            flex: 1 0 50%;
+        }
+
+        @media (min-width: 1080px) {
+            flex: 0 0 33.333%;
+        }
+    }
+
+    &__most-pop {
+        position: absolute;
+        top: 0; left: 50%;
+        transform: translate(-50%, -50%);
+        background: $color-primary-green;
+        color: $color-white;
+        text-transform: uppercase;
+        padding: 6px 20px;
+        width: max-content;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 0.75rem;
+        line-height: 125%;
+    }
+
+    &__item {
+        padding: 40px;
+
+        > :not(:last-child) {
+            margin: 0 0 27px 0;
+        }
+    }
+
+    &__head {}
+
+    &__price {
+        border-bottom: 1px solid $color-light-white;
+        padding: 24px 0;
+    }
+
+    &__btn {
+        width: 100%;
+        padding: 13px 0;
+        font-weight: 600;
+        color: $color-deep-ocean;
+        transition: 0.3s;
+
+        &:hover {
+            color: rgba($color-deep-ocean, 0.8);
+            box-shadow: 0 3px 10px rgba($color-deep-ocean, 0.4);
+            transform: scale(101%, 101%) translate(0, -2px);
+        }
+    }
+
+    &__conditions {}
+}
+
+.price {
+    &__columns {
+        display: flex;
+        align-items: end;
+    }
+
+    &__value {
+        color: $color-deep-ocean;
+        font-size: 3rem;
+        font-weight: 700;
+        letter-spacing: -1.2px;
+        margin: 0 8px 0 0;
+    }
+
+    &__period {
+        color: $color-light-gray;
+        font-size: 0.875rem;
+        font-weight: 400;
+        line-height: 125%;
+    }
+}
+
+.conditions {
+    &__list {
+        
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+
+        color: #364153;
+        font-size: 0.937rem;
+        font-weight: 400;
+        line-height: 150%;
+
+        &::before {
+            content: url(../img/impact/conditions-icon.svg);
+            width: 20px; height: 20px;
+            margin: 0 16px 0 0;
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 16px 0;
+        }
+    }
+}
+
+// ---------- TRUSTED ---------- //
+.trusted {
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: $breakpoint-576px) {
+        width: 75%;
+    }
+
+    @media (min-width: $breakpoint-768px) {
+        width: 50%;
+    }
+
+    @media (min-width: $breakpoint-992px) {
+        width: 100%;
+    }
+
+    &__head {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 125%;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        > :not(:last-child) {
+            margin:  0 0 15px;
+        }
+
+        @media (min-width: $breakpoint-992px) {
+            flex-direction: row;
+
+            > :not(:last-child) {
+                margin:  0 92px 0 0;
+            }
+        }
+    }
+
+    &__item {
+        color: #8c8d8f;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 28px
+    }
+}
+
+// ---------- MODIFICATORS ---------- //
+._most-pop {
+    border: 1px solid $color-primary-green;
+    box-shadow: 0 8px 10px -6px rgba(208,250,229,.5),0 20px 25px -5px rgba(208,250,229,.5);
+}
+
