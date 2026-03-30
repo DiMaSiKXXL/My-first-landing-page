@@ -188,7 +188,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 60px 0 0;
+  padding: 15px 0 0;
   overflow: auto;
   z-index: 50;
   -webkit-transition: background 0.3s;
@@ -273,7 +273,6 @@ img {
 
 .menu__list {
   display: block;
-  margin: 100px 0 0;
 }
 @media (min-width: 768px) {
   .menu__list {
@@ -317,7 +316,7 @@ img {
 }
 
 .main {
-  padding: 168px 0 0;
+  padding: 100px 10px 30px;
 }
 .main .sign {
   margin: 0 auto;
@@ -349,7 +348,8 @@ img {
   background: #fff;
 }
 .main .column-two {
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   margin: 0 auto;
 }
 @media (min-width: 1200px) {
@@ -378,9 +378,9 @@ img {
   }
 }
 .two-columns__column-two, .two-columns__column-one {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 100%;
-          flex: 1 1 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
 }
 @media (min-width: 1200px) {
   .two-columns__column-two, .two-columns__column-one {
@@ -507,6 +507,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-wrap: nowrap;
 }
 .placeholder__logo {
   margin: 0 16px 0 0;
@@ -681,20 +682,22 @@ img {
 .work__items-column {
   display: -ms-grid;
   display: grid;
-  gap: 24px;
+  gap: 10px;
   -ms-grid-columns: 1fr;
   grid-template-columns: repeat(1, 1fr);
 }
 @media (min-width: 768px) {
   .work__items-column {
-    -ms-grid-columns: (1fr)[2];
+    -ms-grid-columns: 1fr 18px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
   }
 }
 @media (min-width: 1200px) {
   .work__items-column {
-    -ms-grid-columns: (1fr)[3];
+    -ms-grid-columns: 1fr 24px 1fr 24px 1fr;
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 }
 .work__image {
@@ -763,10 +766,26 @@ img {
 }
 
 .column__item {
-  padding: 41px;
+  padding: 20px;
 }
 .column__item > :not(:last-child) {
-  margin: 0 0 24px 0;
+  margin: 0 0 12px 0;
+}
+@media (min-width: 768px) {
+  .column__item {
+    padding: 30px;
+  }
+  .column__item > :not(:last-child) {
+    margin: 0 0 18px 0;
+  }
+}
+@media (min-width: 992px) {
+  .column__item {
+    padding: 41px;
+  }
+  .column__item > :not(:last-child) {
+    margin: 0 0 24px 0;
+  }
 }
 .column__icon img {
   width: 48px;
@@ -832,6 +851,11 @@ img {
 @media (min-width: 768px) {
   .numbers__body {
     margin: 0 -15px -30px;
+  }
+}
+@media (min-width: 1400px) {
+  .numbers__body {
+    margin: 0 -15px 30px;
   }
 }
 .numbers__column {
@@ -1018,12 +1042,27 @@ img {
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 6px;
 }
-@media (min-width: 576px) {
+@media (min-width: 376px) {
   .productivity__grid {
-    -ms-grid-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 12px 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .productivity__grid {
+    -ms-grid-columns: 1fr 16px 1fr 16px 1fr 16px 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .productivity__grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 .productivity__header {
@@ -1134,15 +1173,35 @@ img {
 .grid-productivity__icon {
   width: 40px;
   height: 40px;
-  margin: 0 0 32px 0;
+  margin: 0 0 12px 0;
+}
+@media (min-width: 992px) {
+  .grid-productivity__icon {
+    margin: 0 0 20px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-productivity__icon {
+    margin: 0 0 32px 0;
+  }
 }
 .grid-productivity__value {
   font-size: 20px;
   font-weight: 700;
-  line-height: 200%;
+  line-height: 150%;
   letter-spacing: -0.9px;
   color: #555658;
-  margin: 0 0 8px 0;
+  margin: 0 0 2px 0;
+}
+@media (min-width: 992px) {
+  .grid-productivity__value {
+    margin: 0 0 6px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-productivity__value {
+    margin: 0 0 8px 0;
+  }
 }
 .grid-productivity__param {
   font-size: 14px;
@@ -1190,8 +1249,18 @@ img {
   margin: 0 0 32px 0;
 }
 
-.head__columns :not(:last-child) {
-  margin: 0 0 16px;
+.head__columns:not(:last-child) {
+  margin: 0 0 12px;
+}
+@media (min-width: 768px) {
+  .head__columns:not(:last-child) {
+    margin: 0 0 16px;
+  }
+}
+@media (min-width: 992px) {
+  .head__columns:not(:last-child) {
+    margin: 0 0 20px;
+  }
 }
 .head__icon {
   width: 44px;
@@ -1264,11 +1333,11 @@ img {
   padding: 40px;
 }
 .columns__item > :not(:last-child) {
-  margin: 0 0 27px 0;
+  margin: 0 0 25px 0;
 }
 .columns__price {
   border-bottom: 1px solid #F3F4F6;
-  padding: 24px 0;
+  padding: 6px 0 24px;
 }
 .columns__btn {
   width: 100%;
